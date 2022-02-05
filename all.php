@@ -22,7 +22,7 @@
                 <h6 class="text-info mb-5">Admin</h6>
                 <ul class="nav nav-pills mt-5 d-flex flex-column">
                     <li class=""><a class="ps-0 text-dark btn btn-outline-info border-0 my-2 <?php if(basename($_SERVER['REQUEST_URI']) == "p2.php") echo "active";?>" href="p2.php"><i class="bi bi-house-door mx-3"></i><span class=" ">Home</span></a></li>
-                    <li><a class=" ps-0 text-dark btn btn-outline-info border-0 " href="#"><i class="bi bi-bookmark mx-3"></i><span class=" d-sm-inline">Course</span></a></li>
+                    <li><a class=" ps-0 text-dark btn btn-outline-info border-0 " href="course.php"><i class="bi bi-bookmark mx-3"></i><span class=" d-sm-inline">Course</span></a></li>
                     <li><a class="ps-0 text-dark btn btn-outline-info border-0 my-2 <?php if(basename($_SERVER['REQUEST_URI']) == "students.php") echo "active";?>" href="students.php" ><i class="bi bi-mortarboard mx-3"></i><span class=" ">Students</span></a></li>
                     <li><a class="ps-0 text-dark btn btn-outline-info border-0 <?php if(basename($_SERVER['REQUEST_URI']) == "pay.php") echo "active";?>" href="pay.php" ><i class="bi bi-currency-dollar mx-3"></i><span class=" ">Payment</span></a></li>
                     <li><a class="ps-0 text-dark btn btn-outline-info border-0 my-2" href=""><i class="bi bi-file-earmark-bar-graph mx-3"></i><span class="">Report</span></a></li>

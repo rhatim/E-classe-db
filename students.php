@@ -37,22 +37,22 @@ include 'all.php'
             if ($conn->connect_error) {
                 die("Connection failed: " . $conn->connect_error);
             }
-            $sql = "SELECT name, email, phone, enroll_number, date_of_admission from students order by id DESC;";
+            $sql = "SELECT id, name, email, phone, enroll_number, date_of_admission from students order by id DESC;";
             $result = $conn->query($sql);
             if ($result-> num_rows > 0) {
                 while ($row = $result->fetch_assoc()) {
-                    echo "<tr>
-                      <td> <img src='images/table.svg' alt=></td>
-                      <td>" . $row['name'] . "</td>
-                      <td>" . $row['email'] . "</td>
-                      <td>" . $row['phone'] . "</td>
-                      <td>" . $row['enroll_number'] . "</td>
-                      <td class='text-nowrap'>" . $row['date_of_admission'] . "</td>
+                    echo '<tr>
+                      <td> <img src="images/table.svg" alt=></td>
+                      <td>' . $row["name"] . '</td>
+                      <td>' . $row["email"] . '</td>
+                      <td>' . $row["phone"] . '</td>
+                      <td class="text-nowrap">' . $row["enroll_number"] . '</td>
+                      <td class="text-nowrap">' . $row["date_of_admission"] . '</td>
                       
-                      <td class='text-nowrap'><i class='bi bi-pencil text-info mx-4'></i></td>
+                      <td class="text-nowrap"><a href="edit.php?edit='.$row["id"].'" class="bi bi-pencil text-info mx-4"></a></td>
 
-                      <td class='text-nowrap'><i class='bi bi-trash text-info'></i></td>
-                  </tr>";
+                      <td class="text-nowrap"><a href="deletestudent.php?delete='.$row["id"].'" class="bi bi-trash text-info"></a></td>
+                  </tr>';
                 }
             }else {
                 echo "0 results";
