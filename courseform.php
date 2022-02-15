@@ -19,7 +19,15 @@ include 'all.php'
           <label for="title" class="form-label">Title</label>
         <div class="opacity-50">  
             <input type="text" name="title" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter the title of the course">
+        </div>
+        <label for="teacher" class="form-label">Teacher</label>
+        <div class="opacity-50">  
+            <input type="text" name="teacher" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter the teacher of the course">
         </div>  
+        <label for="period" class="form-label">Period</label>
+        <div class="opacity-50">  
+            <input type="text" name="period" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter the period of the course">
+        </div>    
         </div>
         <div class="d-grid pt-5">
             <button type="submit" class="btn btn-info text-white shadow-lg mb-3  rounded">SUBMIT</button>

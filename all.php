@@ -14,7 +14,7 @@
     <div style="overflow-x: hidden;" class="conatiner-fluid">
         <div class="row">
             <input type="checkbox" class="d-none" id="sidebar">
-            <div id="sideb" style="background-color: #FAFFC1; " class=" col-md-3  col-sm-6 text-center  ">
+            <div id="sideb" style="background-color: #FAFFC1; " class="col-lg-2 col-md-3  col-sm-6 col-9 text-center  ">
                 <label class="float-end text-dark" id="sb1" for="sidebar"><i class="bi bi-caret-left text-secondary btn"></i></label> 
                 <h4 class="container  border-start border-5 border-info  mx-1 text-start mt-3 mb-4">E-classe</h4>
                 <img src="images/youcode.png" class="rounded-circle mt-5 " alt="img-user">
@@ -22,7 +22,7 @@
                 <h6 class="text-info mb-5">Admin</h6>
                 <ul class="nav nav-pills mt-5 d-flex flex-column">
                     <li class=""><a class="ps-0 text-dark btn btn-outline-info border-0 my-2 <?php if(basename($_SERVER['REQUEST_URI']) == "p2.php") echo "active";?>" href="p2.php"><i class="bi bi-house-door mx-3"></i><span class=" ">Home</span></a></li>
-                    <li><a class=" ps-0 text-dark btn btn-outline-info border-0 " href="course.php"><i class="bi bi-bookmark mx-3"></i><span class=" d-sm-inline">Course</span></a></li>
+                    <li><a class=" ps-0 text-dark btn btn-outline-info border-0 <?php if(basename($_SERVER['REQUEST_URI']) == "course.php") echo "active";?> " href="course.php"><i class="bi bi-bookmark mx-3"></i><span class=" d-sm-inline">Course</span></a></li>
                     <li><a class="ps-0 text-dark btn btn-outline-info border-0 my-2 <?php if(basename($_SERVER['REQUEST_URI']) == "students.php") echo "active";?>" href="students.php" ><i class="bi bi-mortarboard mx-3"></i><span class=" ">Students</span></a></li>
                     <li><a class="ps-0 text-dark btn btn-outline-info border-0 <?php if(basename($_SERVER['REQUEST_URI']) == "pay.php") echo "active";?>" href="pay.php" ><i class="bi bi-currency-dollar mx-3"></i><span class=" ">Payment</span></a></li>
                     <li><a class="ps-0 text-dark btn btn-outline-info border-0 my-2" href=""><i class="bi bi-file-earmark-bar-graph mx-3"></i><span class="">Report</span></a></li>

@@ -9,6 +9,7 @@ include 'all.php'
       </div>
       <div class="">
         <img class="" src="images/scroll.svg" alt="">
+        <a href="paymentsform.php"><button class="btn btn-info text-white ">ADD NEW PAYMENT</button></a> 
       </div>
     </div>
   </div>
@@ -27,27 +28,28 @@ include 'all.php'
         </tr>
       </thead>
       <tbody>
-        <?php
-       $content = file_get_contents('pay.json');
-       $payments =json_decode($content,true);
-       
-        foreach ($payments as $user) {
-
-          echo "<tr>
-                          <td>" . $user['name'] . "</td>
-                          <td>" . $user['payment_schedule'] . "</td>
-                          <td>" . $user['bill-Number'] . "</td>
-                          <td>" . $user['amount_paid'] . "</td>
-                          <td>" . $user['balance_amount'] . "</td>
-                          <td class='text-nowrap'>" . $user['date'] . "</td>
-                          <td><i class='bi bi-eye text-info'></i></td>
-                          
-
-                        
-                        </tr>";
-                        
-        }
-
+      <?php
+            $conn = new mysqli('localhost', 'root','', 'e_classe_db');
+            if ($conn->connect_error) {
+                die("Connection failed: " . $conn->connect_error);
+            }
+            $sql = "SELECT * from payments order by id DESC;";
+            $result = $conn->query($sql);
+            if ($result-> num_rows > 0) {
+                while ($row = $result->fetch_assoc()) {
+                    echo "<tr>
+                    <td>" . $row['name'] . "</td>
+                    <td>" . $row['payment_schedule'] . "</td>
+                    <td>" . $row['bill_number'] . "</td>
+                    <td>" . $row['amount_paid'] . "</td>
+                    <td>" . $row['balance_amount'] . "</td>
+                    <td class='text-nowrap'>" . $row['date'] . "</td>
+                    <td><i class='bi bi-eye text-info'></i></td>
+                  </tr>";
+                }
+            }else {
+                echo "0 results";
+            }
         ?>
       </tbody>
     </table>
